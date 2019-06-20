@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorPrimary"
+    tools:ignore="ExtraText">
+
+
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:weightSum="1.0"
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/saveImageLayout"
+            android:layout_width="769dp"
+            android:layout_height="596dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/colorPickerBtn"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/image"
+                android:layout_width="763dp"
+                android:layout_height="602dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_drawing_pad"
+                android:layout_width="762dp"
+                android:layout_height="596dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="19dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <Button
+            android:id="@+id/takePicturebtn"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="172dp"
+            android:layout_height="81dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="49dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="102dp"
+            android:background="@color/blue"
+            android:onClick="takePicture"
+            android:text="@string/click_to_take_a_picture"
+            app:layout_constraintBottom_toTopOf="@+id/colorPickerBtn"
+            app:layout_constraintEnd_toStartOf="@+id/saveImageLayout"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/colorPickerBtn"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="166dp"
+            android:layout_height="84dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="92dp"
+            android:background="@color/blue"
+            android:clickable="true"
+            android:enabled="true"
+            android:focusable="true"
+            android:onClick="openColourPicker"
+            android:text="@string/click_to_open_the_colour_pallet"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/takePicturebtn"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="169dp"
+            android:layout_height="86dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="56dp"
+            android:background="@color/blue"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="saveImage"
+            android:text="@string/click_to_save"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/colorPickerBtn" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <!--your drawing pad on foreground -->
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+</RelativeLayout>

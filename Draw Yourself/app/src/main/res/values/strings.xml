@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Drawing App</string>
+    <string name="introMsg">"                            Let your creativity go wild! Either draw on the canvas
+                            provided, or take a picture using your devices camera!
+                            With over 200 colours to choose from, you can draw on
+                            yourself however you like! Whether that be a new tattoo,
+                            funny drawing or hairstyle - this app lets you try it out!
+                            Don't forget to shake your device to clear the drawings!"</string>
+    <string name="click_to_take_a_picture">Click to take a picture!</string>
+    <string name="click_to_open_the_colour_pallet">Click to open the colour pallet!</string>
+    <string name="click_to_save">Click to Save!</string>
+</resources>
